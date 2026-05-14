@@ -4,20 +4,37 @@
 @import url("https://fonts.googleapis.com/earlyaccess/hannari.css");
 
 body {
-  background:
-    linear-gradient(90deg, rgba(0, 58, 78, 0.6), rgba(0, 58, 78, 0.9)),
-    url(image/higashityayamachi01.JPG);
-  height: 2000px; /* ページの高さ */
-  background-size: cover; /* 画像を横幅いっぱいに表示 */
+  /* ほとんどのブラウザは、bodyタグに対して標準で8px程度のマージンを設定しているらしい */
+  margin: 0;
+  padding: 0;
+  background: url(image/background.png);
+  background-size: 100%; /* 画像を横幅いっぱいに表示 */
   background-position: center; /* 画像を中央に配置 */
+  height: 2000px; /* ページの高さ */
 }
 
-h3 {
+h2 {
+  margin-left: 8px;
+  position: relative;
+  display: inline-block;
+  padding: 1rem 2rem 1rem 5rem;
+  color: #003a4e;
+  border-bottom: solid 3px #bfa177;
+  border-right: solid 3px #bfa177;
+  border-radius: 100vh 0 0 100vh;
+  background: #dfdbd4;
   font-family: "Hannari", serif;
-  margin: 1px;
-  text-align: center;
-  color: #20272d;
-  font-size: clamp(10px, 6vw, 30px);
+}
+
+h2:before {
+  position: absolute;
+  top: calc(50% - 7px);
+  left: 10px;
+  width: 14px;
+  height: 14px;
+  content: "";
+  border-radius: 50%;
+  background: #fff;
 }
 
 /* 枠組み */
@@ -36,9 +53,15 @@ h3 {
 /* 本体のデザイン */
 .card {
   background-color: #dfdbd4;
+  border-bottom: solid 3px #bfa177;
   border-radius: 12px; /* 角を丸くする */
   overflow: hidden; /* 中の画像が角丸からはみ出るのを防ぐ */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* 影 */
+}
+
+.card:hover {
+  transform: scale(1.1); /* 画像を少し拡大する */
+  transition: transform 0.3s ease; /* スムーズなアニメーション */
 }
 
 /* 画像部分 */
@@ -69,15 +92,15 @@ h3 {
 }
 
 /* 見出し用ボックス */
-.box-h {
+/* .box-h {
   padding: 0.5em 1em;
   margin: 2em auto;
   width: 50%;
 
   background: #dfdbd4;
-  /* border-bottom: solid 6px #636859; */
+  border-bottom: solid 6px #636859; 
   border-radius: 9px;
-}
+} */
 
 /* 左スクロール */
 @keyframes infinity-scroll-left {

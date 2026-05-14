@@ -9,6 +9,8 @@
   width: 100%;
   height: 100px; /* 150以上でないとノイズがはしる（なんで） */
   background: #dfdbd4;
+  border-top: solid 7px #c2a680;
+  border-bottom: solid 8px #bfa177;
   transition: height 0.3s;
   z-index: 999;
 }
@@ -67,4 +69,4 @@
 
 .header.shrink h1 {
   font-size: 2em;
-} /*# sourceMappingURL=header.css.map */
+}
