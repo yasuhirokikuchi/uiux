@@ -9,8 +9,8 @@
   width: 100%;
   height: 100px; /* 150以上でないとノイズがはしる（なんで） */
   background: #dfdbd4;
-  border-top: solid 7px #c2a680;
-  border-bottom: solid 8px #bfa177;
+  border-top: solid 3px #c2a680;
+  border-bottom: solid 3px #c2a680;
   transition: height 0.3s;
   z-index: 999;
 }
@@ -29,7 +29,7 @@
 
 .header h1,
 .header .menu a {
-  line-height: 100px;
+  line-height: 110px;
 }
 
 .header h1 {
@@ -40,7 +40,7 @@
   font-size: clamp(30px, 6vw, 60px);
 }
 
-.header .menu {
+/* .header .menu {
   float: right;
 }
 .header .menu a {
@@ -50,7 +50,7 @@
 }
 .header .menu a:last-of-type {
   margin-right: 0;
-}
+} */
 
 /* Shrinking　ページがスクロールされたとき */
 .header h1,
@@ -59,12 +59,12 @@
 }
 
 .header.shrink {
-  height: 90px;
+  height: 60px;
 }
 
 .header.shrink h1,
 .header.shrink nav a {
-  line-height: 90px;
+  line-height: 70px;
 }
 
 .header.shrink h1 {

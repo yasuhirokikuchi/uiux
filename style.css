@@ -8,9 +8,16 @@ body {
   margin: 0;
   padding: 0;
   background: url(image/background.png);
-  background-size: 100%; /* 画像を横幅いっぱいに表示 */
-  background-position: center; /* 画像を中央に配置 */
-  height: 2000px; /* ページの高さ */
+  background-size: cover; /* 画面全体を覆うように背景を表示 */
+  background-position: center;
+  background-attachment: fixed; /* スクロールしても背景画像を固定する */
+  min-height: 100vh;
+}
+
+/* リンクの青線消す */
+a {
+  text-decoration: none; /* 下線を消す */
+  color: #000; /* 文字の色を黒など好みの色に変更 */
 }
 
 h2 {
@@ -20,7 +27,7 @@ h2 {
   padding: 1rem 2rem 1rem 5rem;
   color: #003a4e;
   border-bottom: solid 3px #bfa177;
-  border-right: solid 3px #bfa177;
+  border-right: solid 2px #bfa177;
   border-radius: 100vh 0 0 100vh;
   background: #dfdbd4;
   font-family: "Hannari", serif;
@@ -35,6 +42,16 @@ h2:before {
   content: "";
   border-radius: 50%;
   background: #fff;
+}
+
+h3 {
+  text-align: center;
+  color: #dfdbd4;
+  padding: auto;
+}
+
+p {
+  color: #dfdbd4;
 }
 
 /* 枠組み */
@@ -59,9 +76,26 @@ h2:before {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* 影 */
 }
 
+.card2 {
+  background-color: #00465d;
+  border-bottom: solid 3px #dfdbd4;
+  border-right: solid 1.5px #dfdbd4;
+  border-radius: 12px; /* 角を丸くする */
+  overflow: hidden; /* 中の画像が角丸からはみ出るのを防ぐ */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* 影 */
+  padding: 20px;
+  margin: 20px 20px;
+}
+
 .card:hover {
   transform: scale(1.1); /* 画像を少し拡大する */
   transition: transform 0.3s ease; /* スムーズなアニメーション */
+}
+
+.card h3 {
+  font-family: "Hannari", serif;
+  text-align: center;
+  padding: auto;
 }
 
 /* 画像部分 */
@@ -90,17 +124,6 @@ h2:before {
   color: #20272d;
   margin: 0;
 }
-
-/* 見出し用ボックス */
-/* .box-h {
-  padding: 0.5em 1em;
-  margin: 2em auto;
-  width: 50%;
-
-  background: #dfdbd4;
-  border-bottom: solid 6px #636859; 
-  border-radius: 9px;
-} */
 
 /* 左スクロール */
 @keyframes infinity-scroll-left {
