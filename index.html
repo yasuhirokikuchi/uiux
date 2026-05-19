@@ -4,13 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>金沢観光</title>
-    <link rel="icon" type="image/x-icon" href="image/inu.JPG">
+    <link rel="icon" type="image/x-icon" href="image/inu.JPG" />
 
     <link rel="stylesheet" href="style.css" type="text/css" />
     <link rel="stylesheet" href="header.css" type="text/css" />
 
     <script src="index.js"></script>
-
   </head>
 
   <body>
@@ -18,6 +17,11 @@
     <header class="header">
       <div class="wrap">
         <h1>&#x1f4f7;-About KANAZAWA-</h1>
+        <nav class="menu">
+          <a href="#architecture">建築物</a>
+          <a href="#food">食べ物</a>
+          <a href="#history">歴史</a>
+        </nav>
       </div>
     </header>
 
@@ -27,64 +31,85 @@
       <div class="scroll-infinity">
         <div class="scroll-infinity__wrap">
           <ul class="scroll-infinity__list scroll-infinity__list--left">
-            
+            <a href="#higashityayamachi">
               <li class="scroll-infinity__item">
                 <img src="image/higashityayamachi01.JPG" alt="ひがし茶屋街1" />
               </li>
-            
+            </a>
+
+            <a href="#higashityayamachi">
               <li class="scroll-infinity__item">
                 <img src="image/higashityayamachi02.JPG" alt="ひがし茶屋街2" />
               </li>
-            
+            </a>
+
+            <a href="#higashityayamachi">
               <li class="scroll-infinity__item">
                 <img src="image/higashityayamachi03.JPG" alt="ひがし茶屋街3" />
               </li>
-           
+            </a>
+
+            <a href="#higashityayamachi">
               <li class="scroll-infinity__item">
                 <img src="image/higashityayamachi04.JPG" alt="ひがし茶屋街4" />
               </li>
-            
+            </a>
+
+            <a href="#inu">
               <li class="scroll-infinity__item">
                 <img src="image/inu.JPG" alt="いぬ" />
               </li>
-            
+            </a>
+
+            <a href="#kanazawajyou">
               <li class="scroll-infinity__item">
                 <img src="image/kanazawajyou01.JPG" alt="金沢城1" />
               </li>
-            
+            </a>
           </ul>
+
           <ul class="scroll-infinity__list scroll-infinity__list--left">
-            
+            <a href="#kanazawajyou">
               <li class="scroll-infinity__item">
                 <img src="image/kanazawajyou02.JPG" alt="金沢城2" />
               </li>
+            </a>
 
+            <a href="#kenritsutosyokan">
               <li class="scroll-infinity__item">
-                <img src="image/kenritsutosyokan.JPG" alt="石川県立図書館" />
+                <img src="image/kenritsutosyokan01.JPG" alt="石川県立図書館" />
               </li>
-          
+            </a>
+
+            <a href="#kenrokuen">
               <li class="scroll-infinity__item">
                 <img src="image/kenrokuen01.JPG" alt="兼六園1" />
               </li>
-            
+            </a>
+
+            <a href="#kenrokuen">
               <li class="scroll-infinity__item">
                 <img src="image/kenrokuen02.JPG" alt="兼六園2" />
               </li>
-            
+            </a>
+
+            <a href="#oumityouichiba">
               <li class="scroll-infinity__item">
                 <img src="image/oumityouichiba01.JPG" alt="近江町市場1" />
               </li>
-            
+            </a>
+
+            <a href="#oumityouichiba">
               <li class="scroll-infinity__item">
                 <img src="image/oumityouichiba02.JPG" alt="近江町市場2" />
               </li>
-  
+            </a>
           </ul>
         </div>
       </div>
 
       <!-- 見出し -->
-      <section>
+      <section id="architecture">
         <h2>建築物</h2>
       </section>
 
@@ -150,7 +175,7 @@
           <a href="https://maps.app.goo.gl/No4bFTsVWzriKR3G6">
             <article class="card">
               <img
-                src="image/kenritsutosyokan.JPG"
+                src="image/kenritsutosyokan01.JPG"
                 alt="石川県立図書館"
                 class="card__image"
               />
@@ -164,7 +189,7 @@
       </section>
 
       <!-- 食べ物カード -->
-      <section>
+      <section id="food">
         <h2>食べ物</h2>
       </section>
 
@@ -210,7 +235,11 @@
 
           <a href="https://maps.app.goo.gl/69A57dAf5QCxGacT7">
             <article class="card">
-              <img src="image/nodoguro.jpg" alt="のどぐろ" class="card__image" />
+              <img
+                src="image/nodoguro.jpg"
+                alt="のどぐろ"
+                class="card__image"
+              />
               <div class="card__content">
                 <h3 class="card__title">のどぐろ</h3>
                 <p class="card__text"></p>
@@ -221,13 +250,28 @@
       </section>
 
       <!-- 歴史 -->
-      <div>
+      <div id="history">
         <h2>歴史</h2>
       </div>
 
-      <div class="card2">
+      <div class="card2" id="kanazawajyou">
         <h3>金沢城：加賀百万石の権威の象徴</h3>
-        <img src="image/kanazawajyou01.JPG" alt="金沢城" class="history-image" />
+        <ul class="history-image-list">
+          <li>
+            <img
+              src="image/kanazawajyou01.JPG"
+              alt="金沢城"
+              class="history-image"
+            />
+          </li>
+          <li>
+            <img
+              src="image/kanazawajyou02.JPG"
+              alt="金沢城"
+              class="history-image"
+            />
+          </li>
+        </ul>
         <p>
           始まりと織田信長：
           1580年、織田信長の命を受けた柴田勝家の軍勢が、この地にあった宗教拠点（尾山御坊）を攻略したことから城としての歴史が始まります。
@@ -241,9 +285,24 @@
           金沢城は幾度もの火災に遭い、天守閣も1602年に落雷で焼失して以降は再建されませんでした。しかし、その代わりに発展したのが、武器庫を兼ねた「三十間長屋」や、白く美しい鉛瓦、漆喰の壁といった防衛機能と美しさを兼ね備えた建築技術です。現在の姿は、高度な伝統木造軸組工法によって復元されたものです。
         </p>
       </div>
-      <div class="card2">
+      <div class="card2" id="kenrokuen">
         <h3>兼六園：加賀藩主たちの理想郷</h3>
-        <img src="image/kenrokuen01.JPG" alt="兼六園" class="history-image" />
+        <ul class="history-image-list">
+          <li>
+            <img
+              src="image/kenrokuen01.JPG"
+              alt="兼六園"
+              class="history-image"
+            />
+          </li>
+          <li>
+            <img
+              src="image/kenrokuen02.JPG"
+              alt="兼六園"
+              class="history-image"
+            />
+          </li>
+        </ul>
         <p>
           庭園の始まり：
           5代藩主・前田綱紀が1676年に金沢城に面する傾斜地に建てた別荘（蓮池亭）の周辺を造園したのが始まりとされています。
@@ -257,9 +316,31 @@
           明治時代に一般開放されるまで、ここは藩主が賓客を接待したり、思索にふけったりするための私的な空間でした。四季折々の美しさはもちろん、冬の積雪から木の枝を守る「雪吊り」は、城下町の厳しい冬を乗り切る先人の知恵と美意識を今に伝えています。
         </p>
       </div>
-      <div class="card2">
+      <div class="card2" id="higashityayamachi">
         <h3>ひがし茶屋街：町人文化と旦那衆の社交場</h3>
-        <img src="image/higashityayamachi01.JPG" alt="ひがし茶屋街" class="history-image" />
+        <ul class="history-image-list">
+          <li>
+            <img
+              src="image/higashityayamachi02.JPG"
+              alt="ひがし茶屋街"
+              class="history-image"
+            />
+          </li>
+          <li>
+            <img
+              src="image/higashityayamachi03.JPG"
+              alt="ひがし茶屋街"
+              class="history-image"
+            />
+          </li>
+          <li>
+            <img
+              src="image/higashityayamachi04.JPG"
+              alt="ひがし茶屋街"
+              class="history-image"
+            />
+          </li>
+        </ul>
         <p>
           茶屋街の誕生：
           江戸時代後期の1820年、加賀藩が城下に点在していた芸妓（げいこ）を集めて公認した「茶屋街」の一つとして整備されました。
@@ -273,12 +354,75 @@
           通りに面した町家は、1階に「木虫籠（きむすこ）」と呼ばれる美しい出格子（外からは見えにくく、中からは外が見えやすい）を持ち、2階の客間は天井を高くして格式を持たせるなど、当時の建築規制の中で工夫された独特の構造を残しています。
         </p>
       </div>
-      <div class="card2">
+      <div class="card2" id="oumityouichiba">
+        <h3>近江町市場：城下町の台所と食文化の発展</h3>
+        <ul class="history-image-list">
+          <li>
+            <img
+              src="image/oumityouichiba01.JPG"
+              alt="近江町市場"
+              class="history-image"
+            />
+          </li>
+          <li>
+            <img
+              src="image/oumityouichiba02.JPG"
+              alt="近江町市場"
+              class="history-image"
+            />
+          </li>
+        </ul>
+        <p>
+          市場の起源：
+          1721年、加賀藩が城下の商人に対して「近江町」という特定の区域での商売を許可したことから始まりました。もともとは農産物や日用品を扱う市場でしたが、次第に魚介類や加工食品も取り扱うようになりました。
+        </p>
+        <p>
+          食文化の発展：
+          金沢は日本海に面しているため、新鮮な魚介類が豊富に手に入ります。市場は地元住民だけでなく、観光客にも人気のスポットとなり、地元の食文化を支える重要な役割を果たしています。
+        </p>
+      </div>
+      <div class="card2" id="kenritsutosyokan">
+        <h3>石川県立図書館：知識と文化の拠点</h3>
+        <ul class="history-image-list">
+          <li>
+            <img
+              src="image/kenritsutosyokan01.JPG"
+              alt="石川県立図書館"
+              class="history-image"
+            />
+          </li>
+          <li>
+            <img
+              src="image/kenritsutosyokan02.jpg"
+              alt="石川県立図書館"
+              class="history-image"
+            />
+          </li>
+          <li>
+            <img
+              src="image/kenritsutosyokan03.jpg"
+              alt="石川県立図書館"
+              class="history-image"
+            />
+          </li>
+        </ul>
+
+        <p>
+          図書館の設立：
+          1908年、金沢市立図書館として開館しました。戦後の1949年に石川県立図書館となり、県内全域の住民に対してサービスを提供するようになりました。
+        </p>
+        <p>
+          建築の特徴：
+          現在の建物は1985年に完成したもので、モダンなデザインと機能性を兼ね備えています。特に、自然光を取り入れる大きな窓や、静かな閲覧スペースが特徴的です。
+        </p>
+      </div>
+
+      <div class="card2" id="inu">
         <h3>いぬ</h3>
         <img src="image/inu.JPG" alt="いぬ" class="history-image" />
-        <p>道中出会ったイッヌ</p>
-        <p>かわいい。</p>
-      </div>"
+        <p>道中出会ったイッヌ、とても人懐っこい。</p>
+        <p>名前聞くの忘れた、かわいい。</p>
+      </div>
     </main>
   </body>
 </html>
