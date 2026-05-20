@@ -16,18 +16,20 @@
     <!-- ヘッダー -->
     <header class="header">
       <div class="wrap">
-        <h1>
-          <img
-            src="image/logo.svg"
-            alt="Logo"
-            style="
-              height: 0.8em;
-              vertical-align: middle;
-              margin-right: 10px;
-              border-radius: 4px;
-            "
-          />About KANAZAWA
-        </h1>
+        <a href="index.html">
+          <h1>
+            <img
+              src="image/logo.svg"
+              alt="Logo"
+              style="
+                height: 0.8em;
+                vertical-align: middle;
+                margin-right: 10px;
+                border-radius: 4px;
+              "
+            />About KANAZAWA
+          </h1>
+        </a>
         <nav class="menu">
           <a href="building.html">建築物</a>
           <a href="food.html">食べ物</a>
@@ -127,8 +129,8 @@
       <!-- 観光地カード -->
       <section>
         <div class="card-grid">
-          <a href="https://maps.app.goo.gl/Gh2FAZjGLGWhVyMDA">
-            <article class="card">
+          <article class="card">
+            <div class="card__image-wrapper">
               <img
                 src="image/kanazawajyou01.JPG"
                 alt="金沢城"
@@ -136,13 +138,18 @@
               />
               <div class="card__content">
                 <h3 class="card__title">金沢城</h3>
-                <p class="card__text"></p>
               </div>
-            </article>
-          </a>
+            </div>
+            <iframe
+              class="card__map"
+              src="https://maps.google.com/maps?q=金沢城&output=embed"
+              allowfullscreen=""
+              loading="lazy"
+            ></iframe>
+          </article>
 
-          <a href="https://maps.app.goo.gl/fZP5ub7CN5o78JGQ8">
-            <article class="card">
+          <article class="card">
+            <div class="card__image-wrapper">
               <img
                 src="image/kenrokuen01.JPG"
                 alt="兼六園"
@@ -150,13 +157,18 @@
               />
               <div class="card__content">
                 <h3 class="card__title">兼六園</h3>
-                <p class="card__text"></p>
               </div>
-            </article>
-          </a>
+            </div>
+            <iframe
+              class="card__map"
+              src="https://maps.google.com/maps?q=兼六園&output=embed"
+              allowfullscreen=""
+              loading="lazy"
+            ></iframe>
+          </article>
 
-          <a href="https://maps.app.goo.gl/nRmkXz87nu6SAyrE8">
-            <article class="card">
+          <article class="card">
+            <div class="card__image-wrapper">
               <img
                 src="image/oumityouichiba01.JPG"
                 alt="近江町市場"
@@ -164,13 +176,18 @@
               />
               <div class="card__content">
                 <h3 class="card__title">近江町市場</h3>
-                <p class="card__text"></p>
               </div>
-            </article>
-          </a>
+            </div>
+            <iframe
+              class="card__map"
+              src="https://maps.google.com/maps?q=近江町市場&output=embed"
+              allowfullscreen=""
+              loading="lazy"
+            ></iframe>
+          </article>
 
-          <a href="https://maps.app.goo.gl/vnheLjDKDZx5A1sLA">
-            <article class="card">
+          <article class="card">
+            <div class="card__image-wrapper">
               <img
                 src="image/higashityayamachi01.JPG"
                 alt="ひがし茶屋街"
@@ -178,13 +195,18 @@
               />
               <div class="card__content">
                 <h3 class="card__title">ひがし茶屋街</h3>
-                <p class="card__text"></p>
               </div>
-            </article>
-          </a>
+            </div>
+            <iframe
+              class="card__map"
+              src="https://maps.google.com/maps?q=ひがし茶屋街&output=embed"
+              allowfullscreen=""
+              loading="lazy"
+            ></iframe>
+          </article>
 
-          <a href="https://maps.app.goo.gl/No4bFTsVWzriKR3G6">
-            <article class="card">
+          <article class="card">
+            <div class="card__image-wrapper">
               <img
                 src="image/kenritsutosyokan01.JPG"
                 alt="石川県立図書館"
@@ -192,10 +214,15 @@
               />
               <div class="card__content">
                 <h3 class="card__title">石川県立図書館</h3>
-                <p class="card__text"></p>
               </div>
-            </article>
-          </a>
+            </div>
+            <iframe
+              class="card__map"
+              src="https://maps.google.com/maps?q=石川県立図書館&output=embed"
+              allowfullscreen=""
+              loading="lazy"
+            ></iframe>
+          </article>
         </div>
       </section>
 
@@ -206,18 +233,23 @@
 
       <section>
         <div class="card-grid">
-          <a href="https://maps.app.goo.gl/Xg9Tg4ML2w9YDEU58">
-            <article class="card">
+          <article class="card">
+            <div class="card__image-wrapper">
               <img src="image/shiratama.jpg" alt="白玉" class="card__image" />
               <div class="card__content">
                 <h3 class="card__title">白玉</h3>
-                <p class="card__text"></p>
               </div>
-            </article>
-          </a>
+            </div>
+            <iframe
+              class="card__map"
+              src="https://maps.google.com/maps?q=金沢白玉本舗&output=embed"
+              allowfullscreen=""
+              loading="lazy"
+            ></iframe>
+          </article>
 
-          <a href="https://maps.app.goo.gl/HJhQj7Grj6K6NNCx5">
-            <article class="card">
+          <article class="card">
+            <div class="card__image-wrapper">
               <img
                 src="image/hyakumanyaki.jpg"
                 alt="ひゃくまん焼き"
@@ -225,13 +257,18 @@
               />
               <div class="card__content">
                 <h3 class="card__title">ひゃくまん焼き</h3>
-                <p class="card__text"></p>
               </div>
-            </article>
-          </a>
+            </div>
+            <iframe
+              class="card__map"
+              src="https://maps.google.com/maps?q=金沢+ひゃくまん焼き&output=embed"
+              allowfullscreen=""
+              loading="lazy"
+            ></iframe>
+          </article>
 
-          <a href="https://maps.app.goo.gl/f6ygH61hKoA9LsuF9">
-            <article class="card">
+          <article class="card">
+            <div class="card__image-wrapper">
               <img
                 src="image/tiramisu.jpg"
                 alt="抹茶・ほうじ茶ティラミス"
@@ -239,13 +276,18 @@
               />
               <div class="card__content">
                 <h3 class="card__title">抹茶・ほうじ茶ティラミス</h3>
-                <p class="card__text"></p>
               </div>
-            </article>
-          </a>
+            </div>
+            <iframe
+              class="card__map"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d51267.867217342675!2d136.60106453125002!3d36.57239289999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5ff833e4eca14845%3A0x7a08b9f8acace93d!2zTUFDQ0hBIEhPVVNFIOaKueiMtumkqCDph5HmsqLjgbLjgYzjgZfojLblsYvooZc!5e0!3m2!1sja!2sus!4v1779246210816!5m2!1sja!2sus"
+              allowfullscreen=""
+              loading="lazy"
+            ></iframe>
+          </article>
 
-          <a href="https://maps.app.goo.gl/69A57dAf5QCxGacT7">
-            <article class="card">
+          <article class="card">
+            <div class="card__image-wrapper">
               <img
                 src="image/nodoguro.jpg"
                 alt="のどぐろ"
@@ -253,10 +295,15 @@
               />
               <div class="card__content">
                 <h3 class="card__title">のどぐろ</h3>
-                <p class="card__text"></p>
               </div>
-            </article>
-          </a>
+            </div>
+            <iframe
+              class="card__map"
+              src="https://maps.google.com/maps?q=市の蔵+近江町市場店&output=embed"
+              allowfullscreen=""
+              loading="lazy"
+            ></iframe>
+          </article>
         </div>
       </section>
 

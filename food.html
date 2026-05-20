@@ -12,26 +12,113 @@
     <script src="index.js"></script>
   </head>
 
-  <!-- ヘッダー -->
-  <header class="header">
-    <div class="wrap">
-      <a href="index.html">
-        <h1>
-          <img
-            src="image/logo.svg"
-            alt="Logo"
-            style="
-              height: 0.8em;
-              vertical-align: middle;
-              margin-right: 10px;
-              border-radius: 4px;
-            "
-          />About KANAZAWA
-        </h1>
-      </a>
-    </div>
-  </header>
   <body>
-    <h1>金沢の食べ物</h1>
+    <!-- ヘッダー -->
+    <header class="header">
+      <div class="wrap">
+        <a href="index.html">
+          <h1>
+            <img
+              src="image/logo.svg"
+              alt="Logo"
+              style="
+                height: 0.8em;
+                vertical-align: middle;
+                margin-right: 10px;
+                border-radius: 4px;
+              "
+            />About KANAZAWA
+          </h1>
+        </a>
+        <nav class="menu">
+          <a href="building.html">建築物</a>
+          <a href="food.html">食べ物</a>
+          <a href="history.html">歴史</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="fade-in-up">
+      <!-- 食べ物カード -->
+      <section id="food">
+        <h2>食べ物</h2>
+      </section>
+
+      <section>
+        <div class="card-grid">
+          <article class="card">
+            <div class="card__image-wrapper">
+              <img src="image/shiratama.jpg" alt="白玉" class="card__image" />
+              <div class="card__content">
+                <h3 class="card__title">白玉</h3>
+              </div>
+            </div>
+            <iframe
+              class="card__map"
+              src="https://maps.google.com/maps?q=金沢白玉本舗&output=embed"
+              allowfullscreen=""
+              loading="lazy"
+            ></iframe>
+          </article>
+
+          <article class="card">
+            <div class="card__image-wrapper">
+              <img
+                src="image/hyakumanyaki.jpg"
+                alt="ひゃくまん焼き"
+                class="card__image"
+              />
+              <div class="card__content">
+                <h3 class="card__title">ひゃくまん焼き</h3>
+              </div>
+            </div>
+            <iframe
+              class="card__map"
+              src="https://maps.google.com/maps?q=金沢+ひゃくまん焼き&output=embed"
+              allowfullscreen=""
+              loading="lazy"
+            ></iframe>
+          </article>
+
+          <article class="card">
+            <div class="card__image-wrapper">
+              <img
+                src="image/tiramisu.jpg"
+                alt="抹茶・ほうじ茶ティラミス"
+                class="card__image"
+              />
+              <div class="card__content">
+                <h3 class="card__title">抹茶・ほうじ茶ティラミス</h3>
+              </div>
+            </div>
+            <iframe
+              class="card__map"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d51267.867217342675!2d136.60106453125002!3d36.57239289999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5ff833e4eca14845%3A0x7a08b9f8acace93d!2zTUFDQ0hBIEhPVVNFIOaKueiMtumkqCDph5HmsqLjgbLjgYzjgZfojLblsYvooZc!5e0!3m2!1sja!2sus!4v1779246210816!5m2!1sja!2sus"
+              allowfullscreen=""
+              loading="lazy"
+            ></iframe>
+          </article>
+
+          <article class="card">
+            <div class="card__image-wrapper">
+              <img
+                src="image/nodoguro.jpg"
+                alt="のどぐろ"
+                class="card__image"
+              />
+              <div class="card__content">
+                <h3 class="card__title">のどぐろ</h3>
+              </div>
+            </div>
+            <iframe
+              class="card__map"
+              src="https://maps.google.com/maps?q=市の蔵+近江町市場店&output=embed"
+              allowfullscreen=""
+              loading="lazy"
+            ></iframe>
+          </article>
+        </div>
+      </section>
+    </main>
   </body>
 </html>

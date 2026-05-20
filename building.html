@@ -11,26 +11,138 @@
 
     <script src="index.js"></script>
   </head>
-  <!-- ヘッダー -->
-  <header class="header">
-    <div class="wrap">
-      <a href="index.html">
-        <h1>
-          <img
-            src="image/logo.svg"
-            alt="Logo"
-            style="
-              height: 0.8em;
-              vertical-align: middle;
-              margin-right: 10px;
-              border-radius: 4px;
-            "
-          />About KANAZAWA
-        </h1>
-      </a>
-    </div>
-  </header>
+
   <body>
-    <h1>金沢の建築物</h1>
+    <!-- ヘッダー -->
+    <header class="header">
+      <div class="wrap">
+        <a href="index.html">
+          <h1>
+            <img
+              src="image/logo.svg"
+              alt="Logo"
+              style="
+                height: 0.8em;
+                vertical-align: middle;
+                margin-right: 10px;
+                border-radius: 4px;
+              "
+            />About KANAZAWA
+          </h1>
+        </a>
+        <nav class="menu">
+          <a href="building.html">建築物</a>
+          <a href="food.html">食べ物</a>
+          <a href="history.html">歴史</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="fade-in-up">
+      <!-- 見出し -->
+      <section id="architecture">
+        <h2>建築物</h2>
+      </section>
+
+      <!-- 観光地カード -->
+      <section>
+        <div class="card-grid">
+          <article class="card">
+            <div class="card__image-wrapper">
+              <img
+                src="image/kanazawajyou01.JPG"
+                alt="金沢城"
+                class="card__image"
+              />
+              <div class="card__content">
+                <h3 class="card__title">金沢城</h3>
+              </div>
+            </div>
+            <iframe
+              class="card__map"
+              src="https://maps.google.com/maps?q=金沢城&output=embed"
+              allowfullscreen=""
+              loading="lazy"
+            ></iframe>
+          </article>
+
+          <article class="card">
+            <div class="card__image-wrapper">
+              <img
+                src="image/kenrokuen01.JPG"
+                alt="兼六園"
+                class="card__image"
+              />
+              <div class="card__content">
+                <h3 class="card__title">兼六園</h3>
+              </div>
+            </div>
+            <iframe
+              class="card__map"
+              src="https://maps.google.com/maps?q=兼六園&output=embed"
+              allowfullscreen=""
+              loading="lazy"
+            ></iframe>
+          </article>
+
+          <article class="card">
+            <div class="card__image-wrapper">
+              <img
+                src="image/oumityouichiba01.JPG"
+                alt="近江町市場"
+                class="card__image"
+              />
+              <div class="card__content">
+                <h3 class="card__title">近江町市場</h3>
+              </div>
+            </div>
+            <iframe
+              class="card__map"
+              src="https://maps.google.com/maps?q=近江町市場&output=embed"
+              allowfullscreen=""
+              loading="lazy"
+            ></iframe>
+          </article>
+
+          <article class="card">
+            <div class="card__image-wrapper">
+              <img
+                src="image/higashityayamachi01.JPG"
+                alt="ひがし茶屋街"
+                class="card__image"
+              />
+              <div class="card__content">
+                <h3 class="card__title">ひがし茶屋街</h3>
+              </div>
+            </div>
+            <iframe
+              class="card__map"
+              src="https://maps.google.com/maps?q=ひがし茶屋街&output=embed"
+              allowfullscreen=""
+              loading="lazy"
+            ></iframe>
+          </article>
+
+          <article class="card">
+            <div class="card__image-wrapper">
+              <img
+                src="image/kenritsutosyokan01.JPG"
+                alt="石川県立図書館"
+                class="card__image"
+              />
+              <div class="card__content">
+                <h3 class="card__title">石川県立図書館</h3>
+              </div>
+            </div>
+            <iframe
+              class="card__map"
+              src="https://maps.google.com/maps?q=石川県立図書館&output=embed"
+              allowfullscreen=""
+              loading="lazy"
+            ></iframe>
+          </article>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
