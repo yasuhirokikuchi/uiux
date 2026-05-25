@@ -3,280 +3,184 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>金沢観光</title>
-    <link rel="icon" type="image/x-icon" href="image/inu.JPG">
+    <title>金沢観光 - About KANAZAWA</title>
+    <link rel="icon" type="image/svg+xml" href="image/logo.svg" />
 
-    <link rel="stylesheet" href="header.css" type="text/css" />
     <link rel="stylesheet" href="style.css" type="text/css" />
+    <link rel="stylesheet" href="header.css" type="text/css" />
+    <link rel="stylesheet" href="footer.css" type="text/css" />
 
-    <script src="scroll_header.js"></script>
-
+    <script src="index.js"></script>
   </head>
 
   <body>
     <!-- ヘッダー -->
     <header class="header">
       <div class="wrap">
-        <h1>&#x1f4f7;-About KANAZAWA-</h1>
+        <a href="index.html">
+          <h1>
+            <img src="image/logo.svg" alt="Logo" class="logo" />Kanazawa
+            Bookmark
+          </h1>
+        </a>
+        <nav class="menu">
+          <a href="building.html">建築物</a>
+          <a href="food.html">食べ物</a>
+          <a href="history.html">歴史</a>
+        </nav>
       </div>
     </header>
 
     <!-- メインコンテンツ -->
     <main class="fade-in-up">
-      <!-- 画像スクロール -->
-      <div class="scroll-infinity">
-        <div class="scroll-infinity__wrap">
-          <ul class="scroll-infinity__list scroll-infinity__list--left">
-            
-              <li class="scroll-infinity__item">
-                <img src="image/higashityayamachi01.JPG" />
-              </li>
-            
-              <li class="scroll-infinity__item">
-                <img src="image/higashityayamachi02.JPG" />
-              </li>
-            
-              <li class="scroll-infinity__item">
-                <img src="image/higashityayamachi03.JPG" alt="ひがし茶屋街3" />
-              </li>
-           
-              <li class="scroll-infinity__item">
-                <img src="image/higashityayamachi04.JPG" alt="ひがし茶屋街4" />
-              </li>
-            
-              <li class="scroll-infinity__item">
-                <img src="image/inu.JPG" alt="いぬ" />
-              </li>
-            
-              <li class="scroll-infinity__item">
-                <img src="image/kanazawajyou01.JPG" alt="金沢城1" />
-              </li>
-            
-          </ul>
-          <ul class="scroll-infinity__list scroll-infinity__list--left">
-            
-              <li class="scroll-infinity__item">
-                <img src="image/kanazawajyou02.JPG" alt="金沢城2" />
-              </li>
-
-              <li class="scroll-infinity__item">
-                <img src="image/kenritsutosyokan.JPG" alt="石川県立図書館" />
-              </li>
-          
-              <li class="scroll-infinity__item">
-                <img src="image/kenrokuen01.JPG" alt="兼六園1" />
-              </li>
-            
-              <li class="scroll-infinity__item">
-                <img src="image/kenrokuen02.JPG" alt="兼六園2" />
-              </li>
-            
-              <li class="scroll-infinity__item">
-                <img src="image/oumityouichiba01.JPG" alt="近江町市場1" />
-              </li>
-            
-              <li class="scroll-infinity__item">
-                <img src="image/oumityouichiba02.JPG" alt="近江町市場2" />
-              </li>
-  
-          </ul>
+      <!-- ヒーローセクション -->
+      <section class="hero">
+        <div class="hero__bg"></div>
+        <div class="hero__content">
+          <h2>KANAZAWA</h2>
+          <p class="hero__subtitle">
+            History and Modernity Intertwined<!-- 歴史と現代性が絡み合う -->
+          </p>
         </div>
-      </div>
+      </section>
 
-      <!-- 見出し -->
-      <div>
-        <h2>建築物</h2>
-      </div>
+      <!-- イントロダクション -->
+      <section class="intro">
+        <h3>石川県金沢市</h3>
+        <p>百年の歴史と、新しい感性が息づく街。</p>
+      </section>
 
-      <!-- 観光地カード -->
-      <div>
-        <div class="card-grid">
-          <a href="https://maps.app.goo.gl/Gh2FAZjGLGWhVyMDA">
-            <article class="card">
-              <img
-                src="image/kanazawajyou01.JPG"
-                alt="金沢城"
-                class="card__image"
-              />
-              <div class="card__content">
-                <h3 class="card__title">金沢城</h3>
-                <p class="card__text"></p>
+      <!-- カテゴリーナビゲーション -->
+      <section class="categories">
+        <div class="wrap">
+          <h2>カテゴリー</h2>
+          <div class="category-grid">
+            <a href="building.html" class="category-card">
+              <img src="image/kenritsutosyokan01.JPG" alt="建築物" />
+              <div class="category-card__overlay">
+                <h3 class="category-card__title">建築物</h3>
+                <p class="category-card__desc">
+                  伝統的な町家から近代的な建築まで
+                </p>
               </div>
-            </article>
-          </a>
-
-          <a href="https://maps.app.goo.gl/fZP5ub7CN5o78JGQ8">
-            <article class="card">
-              <img
-                src="image/kenrokuen01.JPG"
-                alt="兼六園"
-                class="card__image"
-              />
-              <div class="card__content">
-                <h3 class="card__title">兼六園</h3>
-                <p class="card__text"></p>
+            </a>
+            <a href="food.html" class="category-card">
+              <img src="image/nodoguro.jpg" alt="食べ物" />
+              <div class="category-card__overlay">
+                <h3 class="category-card__title">食べ物</h3>
+                <p class="category-card__desc">日本海の海の幸と繊細な和菓子</p>
               </div>
-            </article>
-          </a>
-
-          <a href="https://maps.app.goo.gl/nRmkXz87nu6SAyrE8">
-            <article class="card">
-              <img
-                src="image/oumityouichiba01.JPG"
-                alt="近江町市場"
-                class="card__image"
-              />
-              <div class="card__content">
-                <h3 class="card__title">近江町市場</h3>
-                <p class="card__text"></p>
+            </a>
+            <a href="history.html" class="category-card">
+              <img src="image/kanazawajyou01.JPG" alt="歴史" />
+              <div class="category-card__overlay">
+                <h3 class="category-card__title">歴史</h3>
+                <p class="category-card__desc">加賀百万石の歩みを知る</p>
               </div>
-            </article>
-          </a>
-
-          <a href="https://maps.app.goo.gl/vnheLjDKDZx5A1sLA">
-            <article class="card">
-              <img
-                src="image/higashityayamachi01.JPG"
-                alt="ひがし茶屋街"
-                class="card__image"
-              />
-              <div class="card__content">
-                <h3 class="card__title">ひがし茶屋街</h3>
-                <p class="card__text"></p>
-              </div>
-            </article>
-          </a>
-
-          <a href="https://maps.app.goo.gl/No4bFTsVWzriKR3G6">
-            <article class="card">
-              <img
-                src="image/kenritsutosyokan.JPG"
-                alt="石川県立図書館"
-                class="card__image"
-              />
-              <div class="card__content">
-                <h3 class="card__title">石川県立図書館</h3>
-                <p class="card__text"></p>
-              </div>
-            </article>
-          </a>
+            </a>
+          </div>
         </div>
-      </div>
+      </section>
 
-      <!-- 食べ物カード -->
-      <div>
-        <h2>食べ物</h2>
-      </div>
+      <!-- ギャラリー -->
+      <section class="featured">
+        <h2>ギャラリー</h2>
+        <div class="scroll-infinity">
+          <div class="scroll-infinity__wrap">
+            <ul class="scroll-infinity__list scroll-infinity__list--left">
+              <a href="history.html#higashityayamachi">
+                <li class="scroll-infinity__item">
+                  <img
+                    src="image/higashityayamachi01.JPG"
+                    alt="ひがし茶屋街1"
+                  />
+                </li>
+              </a>
+              <a href="history.html#higashityayamachi">
+                <li class="scroll-infinity__item">
+                  <img
+                    src="image/higashityayamachi02.JPG"
+                    alt="ひがし茶屋街2"
+                  />
+                </li>
+              </a>
+              <a href="history.html#higashityayamachi">
+                <li class="scroll-infinity__item">
+                  <img
+                    src="image/higashityayamachi03.JPG"
+                    alt="ひがし茶屋街3"
+                  />
+                </li>
+              </a>
+              <a href="history.html#higashityayamachi">
+                <li class="scroll-infinity__item">
+                  <img
+                    src="image/higashityayamachi04.JPG"
+                    alt="ひがし茶屋街4"
+                  />
+                </li>
+              </a>
+              <a href="history.html#inu">
+                <li class="scroll-infinity__item">
+                  <img src="image/inu.JPG" alt="いぬ" />
+                </li>
+              </a>
+              <a href="history.html#kanazawajyou">
+                <li class="scroll-infinity__item">
+                  <img src="image/kanazawajyou01.JPG" alt="金沢城1" />
+                </li>
+              </a>
+            </ul>
 
-      <div>
-        <div class="card-grid">
-          <a href="https://maps.app.goo.gl/Xg9Tg4ML2w9YDEU58">
-            <article class="card">
-              <img src="image/shiratama.jpg" alt="白玉" class="card__image" />
-              <div class="card__content">
-                <h3 class="card__title">白玉</h3>
-                <p class="card__text"></p>
-              </div>
-            </article>
-          </a>
-
-          <a href="https://maps.app.goo.gl/HJhQj7Grj6K6NNCx5">
-            <article class="card">
-              <img
-                src="image/hyakumanyaki.jpg"
-                alt="ひゃくまん焼き"
-              class="card__image"
-            />
-            <div class="card__content">
-              <h3 class="card__title">ひゃくまん焼き</h3>
-              <p class="card__text"></p>
-            </div>
-          </article>
-
-          <a href="https://maps.app.goo.gl/f6ygH61hKoA9LsuF9">
-            <article class="card">
-              <img
-                src="image/tiramisu.jpg"
-                alt="抹茶・ほうじ茶ティラミス"
-                class="card__image"
-              />
-            <div class="card__content">
-              <h3 class="card__title">抹茶・ほうじ茶ティラミス</h3>
-              <p class="card__text"></p>
-            </div>
-          </article>
-
-          <a href="https://maps.app.goo.gl/69A57dAf5QCxGacT7">
-            <article class="card">
-              <img src="image/nodoguro.jpg" alt="のどぐろ" class="card__image" />
-              <div class="card__content">
-                <h3 class="card__title">のどぐろ</h3>
-                <p class="card__text"></p>
-              </div>
-            </article>
-          </a>
+            <ul class="scroll-infinity__list scroll-infinity__list--left">
+              <a href="history.html#kanazawajyou">
+                <li class="scroll-infinity__item">
+                  <img src="image/kanazawajyou02.JPG" alt="金沢城2" />
+                </li>
+              </a>
+              <a href="building.html#architecture">
+                <li class="scroll-infinity__item">
+                  <img
+                    src="image/kenritsutosyokan01.JPG"
+                    alt="石川県立図書館"
+                  />
+                </li>
+              </a>
+              <a href="history.html#kenrokuen">
+                <li class="scroll-infinity__item">
+                  <img src="image/kenrokuen01.JPG" alt="兼六園1" />
+                </li>
+              </a>
+              <a href="history.html#kenrokuen">
+                <li class="scroll-infinity__item">
+                  <img src="image/kenrokuen02.JPG" alt="兼六園2" />
+                </li>
+              </a>
+              <a href="building.html#architecture">
+                <li class="scroll-infinity__item">
+                  <img src="image/oumityouichiba01.JPG" alt="近江町市場1" />
+                </li>
+              </a>
+              <a href="building.html#architecture">
+                <li class="scroll-infinity__item">
+                  <img src="image/oumityouichiba02.JPG" alt="近江町市場2" />
+                </li>
+              </a>
+            </ul>
+          </div>
         </div>
-      </div>
-
-      <!-- 歴史 -->
-      <div>
-        <h2>歴史</h2>
-      </div>
-
-      <div class="card2">
-        <h3>金沢城：加賀百万石の権威の象徴</h3>
-        <img src="image/kanazawajyou01.JPG" alt="金沢城" class="history-image" />
-        <p>
-          始まりと織田信長：
-          1580年、織田信長の命を受けた柴田勝家の軍勢が、この地にあった宗教拠点（尾山御坊）を攻略したことから城としての歴史が始まります。
-        </p>
-        <p>
-          前田利家の入城：
-          1583年、加賀藩の祖である前田利家が入城し、本格的な城郭整備が始まりました。
-        </p>
-        <p>
-          「守り」と「美」の融合：
-          金沢城は幾度もの火災に遭い、天守閣も1602年に落雷で焼失して以降は再建されませんでした。しかし、その代わりに発展したのが、武器庫を兼ねた「三十間長屋」や、白く美しい鉛瓦、漆喰の壁といった防衛機能と美しさを兼ね備えた建築技術です。現在の姿は、高度な伝統木造軸組工法によって復元されたものです。
-        </p>
-      </div>
-      <div class="card2">
-        <h3>兼六園：加賀藩主たちの理想郷</h3>
-        <img src="image/kenrokuen01.JPG" alt="兼六園" class="history-image" />
-        <p>
-          庭園の始まり：
-          5代藩主・前田綱紀が1676年に金沢城に面する傾斜地に建てた別荘（蓮池亭）の周辺を造園したのが始まりとされています。
-        </p>
-        <p>
-          名前の由来：
-          12代藩主・前田斉広の時代、白河藩主・松平定信によって「兼六園」と命名されました。中国の古典に登場する、庭園が備えるべき6つの景観（宏大・幽邃・人力・蒼古・水泉・眺望）をすべて兼ね備えていることが由来です。
-        </p>
-        <p>
-          文化の集大成：
-          明治時代に一般開放されるまで、ここは藩主が賓客を接待したり、思索にふけったりするための私的な空間でした。四季折々の美しさはもちろん、冬の積雪から木の枝を守る「雪吊り」は、城下町の厳しい冬を乗り切る先人の知恵と美意識を今に伝えています。
-        </p>
-      </div>
-      <div class="card2">
-        <h3>ひがし茶屋街：町人文化と旦那衆の社交場</h3>
-        <img src="image/higashityayamachi01.JPG" alt="ひがし茶屋街" class="history-image" />
-        <p>
-          茶屋街の誕生：
-          江戸時代後期の1820年、加賀藩が城下に点在していた芸妓（げいこ）を集めて公認した「茶屋街」の一つとして整備されました。
-        </p>
-        <p>
-          お座敷文化の発達：
-          格式高い茶屋には、豪商や文人墨客といった「旦那衆」が集まり、芸妓による唄や踊り、三味線などの洗練された遊芸を楽しみました。一見さんお断りの文化もここで育まれます。
-        </p>
-        <p>
-          建築の歴史：
-          通りに面した町家は、1階に「木虫籠（きむすこ）」と呼ばれる美しい出格子（外からは見えにくく、中からは外が見えやすい）を持ち、2階の客間は天井を高くして格式を持たせるなど、当時の建築規制の中で工夫された独特の構造を残しています。
-        </p>
-      </div>
-      <div class="card2">
-        <h3>いぬ</h3>
-        <img src="image/inu.JPG" alt="いぬ" class="history-image" />
-        <p>道中出会ったイッヌ</p>
-        <p>かわいい。</p>
-      </div>"
+      </section>
     </main>
+
+    <!-- フッター -->
+    <footer class="footer">
+      <div class="footer-logo">Kanazawa Bookmark</div>
+      <nav class="footer-nav">
+        <a href="index.html">トップ</a>
+        <a href="building.html">建築物</a>
+        <a href="food.html">食べ物</a>
+        <a href="history.html">歴史</a>
+      </nav>
+    </footer>
   </body>
 </html>
