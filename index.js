@@ -1,3 +1,76 @@
+// ギャラリーの無限スクロール
+document.addEventListener("DOMContentLoaded", function () {
+  const scrollWrap = document.querySelector(".scroll-infinity__wrap");
+  if (!scrollWrap) return;
+
+  const scrollLists = scrollWrap.querySelectorAll(".scroll-infinity__list");
+
+  // 無限ループのためにリストを複製
+  scrollLists.forEach((list) => {
+    const clone = list.cloneNode(true);
+    scrollWrap.appendChild(clone);
+  });
+
+  let isPaused = false;
+  let resumeTimer = null;
+  const scrollSpeed = 0.8; // スクロール速度（ピクセル/フレーム）
+
+  function autoScroll() {
+    if (!isPaused) {
+      scrollWrap.scrollLeft += scrollSpeed;
+    }
+
+    // 常にループ境界をチェック
+    const halfWidth = scrollWrap.scrollWidth / 2;
+    if (scrollWrap.scrollLeft >= halfWidth) {
+      scrollWrap.scrollLeft -= halfWidth;
+    } else if (scrollWrap.scrollLeft <= 0 && isPaused) {
+      // 手動で戻りすぎた場合
+      // scrollWrap.scrollLeft = halfWidth;
+    }
+
+    requestAnimationFrame(autoScroll);
+  }
+
+  const pauseAutoScroll = () => {
+    isPaused = true;
+    // 手動操作中はスナップを有効にする（モバイル向け）
+    if (window.innerWidth <= 768) {
+      scrollWrap.style.scrollSnapType = "x mandatory";
+    }
+    if (resumeTimer) clearTimeout(resumeTimer);
+  };
+
+  const resumeAutoScroll = () => {
+    if (resumeTimer) clearTimeout(resumeTimer);
+    resumeTimer = setTimeout(() => {
+      // 自動スクロール再開時はスナップを無効にして滑らかに
+      scrollWrap.style.scrollSnapType = "none";
+      isPaused = false;
+    }, 2000);
+  };
+
+  // イベント登録
+  scrollWrap.addEventListener("mouseenter", pauseAutoScroll);
+  scrollWrap.addEventListener("mouseleave", resumeAutoScroll);
+  scrollWrap.addEventListener("touchstart", pauseAutoScroll, { passive: true });
+  scrollWrap.addEventListener("touchend", resumeAutoScroll, { passive: true });
+
+  // スクロール中もタイマー更新
+  scrollWrap.addEventListener(
+    "scroll",
+    () => {
+      if (isPaused) {
+        resumeAutoScroll();
+      }
+    },
+    { passive: true }
+  );
+
+  // 初回開始
+  autoScroll();
+});
+
 // スムーススクロール処理
 document.addEventListener("DOMContentLoaded", function () {
   const header = document.querySelector(".header");
@@ -14,7 +87,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // ヘッダーの高さを取得（縮小時を考慮）
       const headerHeight = header.offsetHeight;
-      // 追加の余白（必要に応じて調整）
+      // 追加の余白
       const offset = 20;
 
       // 要素の位置を取得

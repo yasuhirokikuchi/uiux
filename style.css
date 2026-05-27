@@ -232,63 +232,39 @@ p {
 /* Infinity Scroll */
 .scroll-infinity__wrap {
   display: flex;
-  overflow: hidden;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -ms-overflow-style: none; /* IE, Edge */
+  scrollbar-width: none; /* Firefox */
+  -webkit-overflow-scrolling: touch;
 }
 
-@media screen and (max-width: 768px) {
-  .scroll-infinity__wrap {
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    padding-bottom: 10px; /* スクロールバー用の微調整 */
-  }
+.scroll-infinity__wrap::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
 }
 
 .scroll-infinity__list {
   display: flex;
   list-style: none;
   padding: 0;
+  margin: 0;
   flex-shrink: 0;
-}
-
-.scroll-infinity__list--left {
-  animation: infinity-scroll-left 80s infinite linear;
-}
-
-@media screen and (max-width: 768px) {
-  .scroll-infinity__list--left {
-    animation: none;
-  }
-  /* モバイルではループ用の重複リストを隠す */
-  .scroll-infinity__list:nth-child(2) {
-    display: none;
-  }
-}
-
-@keyframes infinity-scroll-left {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-100%);
-  }
 }
 
 .scroll-infinity__item {
   width: 33.33vw;
+  flex-shrink: 0;
+  scroll-snap-align: start;
 }
 
 @media screen and (max-width: 768px) {
   .scroll-infinity__item {
-    width: 80vw; /* スマホでは1枚を大きく表示 */
+    width: 80vw;
+    margin-right: 15px;
     scroll-snap-align: center;
-    margin-right: 10px;
   }
-}
-
-@media screen and (min-width: 768px) {
-  .scroll-infinity__item {
-    width: 25vw;
+  .scroll-infinity__wrap {
+    padding: 0 10px 20px;
   }
 }
 
