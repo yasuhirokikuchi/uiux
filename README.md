@@ -48,7 +48,7 @@ C:\VS Code\uiux\
 │   └── footer.css
 ├── js/                   # JavaScript
 │   └── index.js
-├── images/               # 画像資産 (image/ からリネーム)
+├── images/               # 画像資産
 │   └── ... (全ての画像ファイル)
 ├── README.md
 └── memo.txt
