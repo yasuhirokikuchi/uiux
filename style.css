@@ -255,16 +255,6 @@ p {
   animation: infinity-scroll-left 80s infinite linear;
 }
 
-@media screen and (max-width: 768px) {
-  .scroll-infinity__list--left {
-    animation: none;
-  }
-  /* モバイルではループ用の重複リストを隠す */
-  .scroll-infinity__list:nth-child(2) {
-    display: none;
-  }
-}
-
 @keyframes infinity-scroll-left {
   from {
     transform: translateX(0);
@@ -276,20 +266,6 @@ p {
 
 .scroll-infinity__item {
   width: 33.33vw;
-}
-
-@media screen and (max-width: 768px) {
-  .scroll-infinity__item {
-    width: 80vw; /* スマホでは1枚を大きく表示 */
-    scroll-snap-align: center;
-    margin-right: 10px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .scroll-infinity__item {
-    width: 25vw;
-  }
 }
 
 @media screen and (min-width: 900px) {
