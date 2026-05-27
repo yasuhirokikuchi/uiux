@@ -18,12 +18,14 @@
 ## 構成
 
 ### ページ構成
+
 - **トップページ (`index.html`)**: サイトの入り口。各カテゴリーへのナビゲーションやギャラリーを表示します。
 - **建築物 (`building.html`)**: 金沢城や兼六園、石川県立図書館などの歴史的・現代的建築物を紹介します。
 - **食べ物 (`food.html`)**: のどぐろや和菓子、スイーツなどの地元の食文化を紹介します。
 - **歴史 (`history.html`)**: 各名所の歴史的背景を深く掘り下げて解説します。
 
 ### 技術スタック
+
 - **HTML5**: セマンティックなマークアップ。
 - **CSS3**: フレックスボックスやグリッドを用いたレイアウト、アニメーション。
 - **JavaScript (Vanilla JS)**: スムーズスクロール、ヘッダーのスクロールエフェクト。
@@ -32,15 +34,22 @@
 
 ```text
 C:\VS Code\uiux\
-├── index.html          # トップページ
-├── building.html       # 建築物紹介ページ
-├── food.html           # 食べ物紹介ページ
-├── history.html        # 歴史解説ページ
-├── style.css           # 基本スタイル
-├── header.css          # ヘッダー用スタイル
-├── footer.css          # フッター用スタイル
-├── index.js            # インタラクティブ機能（JS）
-└── image/              # 写真・アイコン画像アセット
+/ (ルート)
+├── index.html            # トップページ
+├── pages/                # 各下層ページ (建築物、食べ物、歴史)
+│   ├── building.html
+│   ├── food.html
+│   └── history.html
+├── css/                  # スタイルシート
+│   ├── style.css
+│   ├── header.css
+│   └── footer.css
+├── js/                   # JavaScript
+│   └── index.js
+├── images/               # 画像資産 (image/ からリネーム)
+│   └── ... (全ての画像ファイル)
+├── README.md
+└── memo.txt
 ```
 
 ## 使い方
