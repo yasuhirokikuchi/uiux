@@ -251,19 +251,6 @@ p {
   flex-shrink: 0;
 }
 
-.scroll-infinity__list--left {
-  animation: infinity-scroll-left 80s infinite linear;
-}
-
-@keyframes infinity-scroll-left {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-100%);
-  }
-}
-
 .scroll-infinity__item {
   width: 33.33vw;
   flex-shrink: 0;
@@ -383,6 +370,8 @@ p {
   background-position: center;
   z-index: -1;
   transition: transform 10s ease-out;
+  -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
 }
 
 .hero:hover .hero__bg {
@@ -414,7 +403,9 @@ p {
 /* Introduction */
 .intro {
   max-width: 800px;
-  margin: 0 auto 80px;
+  margin: -40px auto 80px;
+  position: relative;
+  z-index: 1;
   padding: 40px 20px;
   text-align: center;
   background: rgba(255, 255, 255, 0.5);

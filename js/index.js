@@ -13,20 +13,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
   let isPaused = false;
   let resumeTimer = null;
-  const scrollSpeed = 0.8; // スクロール速度（ピクセル/フレーム）
+  const scrollSpeed = 0.3; // スクロール速度（ピクセル/フレーム）
+  let currentScroll = scrollWrap.scrollLeft;
 
   function autoScroll() {
     if (!isPaused) {
-      scrollWrap.scrollLeft += scrollSpeed;
+      currentScroll += scrollSpeed;
+      scrollWrap.scrollLeft = currentScroll;
+    } else {
+      // 手動操作中は内部変数を同期
+      currentScroll = scrollWrap.scrollLeft;
     }
 
     // 常にループ境界をチェック
     const halfWidth = scrollWrap.scrollWidth / 2;
     if (scrollWrap.scrollLeft >= halfWidth) {
-      scrollWrap.scrollLeft -= halfWidth;
-    } else if (scrollWrap.scrollLeft <= 0 && isPaused) {
-      // 手動で戻りすぎた場合
-      // scrollWrap.scrollLeft = halfWidth;
+      currentScroll -= halfWidth;
+      scrollWrap.scrollLeft = currentScroll;
     }
 
     requestAnimationFrame(autoScroll);
@@ -47,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
       // 自動スクロール再開時はスナップを無効にして滑らかに
       scrollWrap.style.scrollSnapType = "none";
       isPaused = false;
-    }, 2000);
+    }, 0);
   };
 
   // イベント登録
@@ -64,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
         resumeAutoScroll();
       }
     },
-    { passive: true }
+    { passive: true },
   );
 
   // 初回開始
