@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   let isPaused = false;
   let resumeTimer = null;
-  const scrollSpeed = 0.8; // スクロール速度（ピクセル/フレーム）
+  const scrollSpeed = 0.4; // スクロール速度（ピクセル/フレーム）
   let currentScroll = scrollWrap.scrollLeft;
 
   function autoScroll() {
@@ -54,8 +54,6 @@ document.addEventListener("DOMContentLoaded", function () {
   };
 
   // イベント登録
-  scrollWrap.addEventListener("mouseenter", pauseAutoScroll);
-  scrollWrap.addEventListener("mouseleave", resumeAutoScroll);
   scrollWrap.addEventListener("touchstart", pauseAutoScroll, { passive: true });
   scrollWrap.addEventListener("touchend", resumeAutoScroll, { passive: true });
 
