@@ -35,8 +35,7 @@
 ## ファイル構造
 
 ```text
-C:\VS Code\uiux\
-/ (ルート)
+
 ├── index.html            # トップページ
 ├── pages/                # 各下層ページ (建築物、食べ物、歴史)
 │   ├── building.html
