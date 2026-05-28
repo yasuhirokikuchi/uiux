@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   let isPaused = false;
   let resumeTimer = null;
-  const scrollSpeed = 0.3; // スクロール速度（ピクセル/フレーム）
+  const scrollSpeed = 0.8; // スクロール速度（ピクセル/フレーム）
   let currentScroll = scrollWrap.scrollLeft;
 
   function autoScroll() {
@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
       // 自動スクロール再開時はスナップを無効にして滑らかに
       scrollWrap.style.scrollSnapType = "none";
       isPaused = false;
-    }, 0);
+    }, 400);
   };
 
   // イベント登録
@@ -59,12 +59,12 @@ document.addEventListener("DOMContentLoaded", function () {
   scrollWrap.addEventListener("touchstart", pauseAutoScroll, { passive: true });
   scrollWrap.addEventListener("touchend", resumeAutoScroll, { passive: true });
 
-  // スクロール中もタイマー更新
+  // 慣性スクロール中も「操作中」とみなし、停止するまで再開させない
   scrollWrap.addEventListener(
     "scroll",
     () => {
       if (isPaused) {
-        resumeAutoScroll();
+        resumeAutoScroll(); // スクロールが続いている間はタイマーを延長し続ける
       }
     },
     { passive: true },
