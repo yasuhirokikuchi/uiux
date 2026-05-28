@@ -50,6 +50,6 @@ C:\VS Code\uiux\
 │   └── index.js
 ├── images/               # 画像資産
 │   └── ... (全ての画像ファイル)
-├── README.md
-└── memo.txt
+└── README.md
+
 ```
