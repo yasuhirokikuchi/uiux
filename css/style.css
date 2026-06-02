@@ -239,6 +239,12 @@ p {
   -webkit-overflow-scrolling: touch;
 }
 
+@media screen and (min-width: 769px) {
+  .scroll-infinity__wrap {
+    overflow-x: hidden;
+  }
+}
+
 .scroll-infinity__wrap::-webkit-scrollbar {
   display: none; /* Chrome, Safari */
 }

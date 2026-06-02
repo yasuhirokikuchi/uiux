@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   let isPaused = false;
   let resumeTimer = null;
-  const scrollSpeed = 0.4; // スクロール速度（ピクセル/フレーム）
+  const scrollSpeed = 0.8; // スクロール速度（ピクセル/フレーム）
   let currentScroll = scrollWrap.scrollLeft;
 
   function autoScroll() {
@@ -36,15 +36,15 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   const pauseAutoScroll = () => {
+    if (window.innerWidth > 768) return; // デスクトップ版では手動操作による一時停止を無効化
     isPaused = true;
     // 手動操作中はスナップを有効にする（モバイル向け）
-    if (window.innerWidth <= 768) {
-      scrollWrap.style.scrollSnapType = "x mandatory";
-    }
+    scrollWrap.style.scrollSnapType = "x mandatory";
     if (resumeTimer) clearTimeout(resumeTimer);
   };
 
   const resumeAutoScroll = () => {
+    if (window.innerWidth > 768) return;
     if (resumeTimer) clearTimeout(resumeTimer);
     resumeTimer = setTimeout(() => {
       // 自動スクロール再開時はスナップを無効にして滑らかに
@@ -70,39 +70,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // 初回開始
   autoScroll();
-});
-
-// スムーススクロール処理
-document.addEventListener("DOMContentLoaded", function () {
-  const header = document.querySelector(".header");
-
-  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-    anchor.addEventListener("click", function (e) {
-      e.preventDefault();
-
-      const href = this.getAttribute("href");
-      if (href === "#") return;
-
-      const target = document.querySelector(href);
-      if (!target) return;
-
-      // ヘッダーの高さを取得（縮小時を考慮）
-      const headerHeight = header.offsetHeight;
-      // 追加の余白
-      const offset = 20;
-
-      // 要素の位置を取得
-      const elementPosition = target.getBoundingClientRect().top;
-      // 現在のスクロール位置 + 要素の位置 - ヘッダーの高さ - 余白
-      const offsetPosition =
-        elementPosition + window.pageYOffset - headerHeight - offset;
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth",
-      });
-    });
-  });
 });
 
 // ヘッダーの縮小処理
