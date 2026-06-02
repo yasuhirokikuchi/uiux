@@ -6,8 +6,9 @@
 
 [https://yasuhirokikuchi.github.io/](https://yasuhirokikuchi.github.io/)
 
-<img width="50%" height="50%" alt="ホームページ" src="https://github.com/user-attachments/assets/e01cade2-a7d0-4114-aea4-4d30a00cac1e" align="center"/>
-
+<p align="center">
+<img width="50%" height="50%" alt="ホームページ" src="https://github.com/user-attachments/assets/e01cade2-a7d0-4114-aea4-4d30a00cac1e"/>
+</p>
 
 ## 概要
 
