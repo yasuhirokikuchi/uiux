@@ -3,7 +3,11 @@
 石川県金沢市の魅力を紹介する観光情報ウェブサイトです。
 「建築物」「食べ物」「歴史」の3つのカテゴリーに焦点を当て、金沢の伝統と現代が融合した姿を発信しています。
 
+
 [https://yasuhirokikuchi.github.io/](https://yasuhirokikuchi.github.io/)
+
+<img width="1899" height="1199" alt="image" src="https://github.com/user-attachments/assets/e01cade2-a7d0-4114-aea4-4d30a00cac1e" />
+
 
 ## 概要
 
