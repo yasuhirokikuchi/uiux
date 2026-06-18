@@ -4,7 +4,8 @@
 「建築物」「食べ物」「歴史」の3つのカテゴリーに焦点を当て、金沢の伝統と現代が融合した姿を発信しています。
 
 
-[Vercel で公開中](https://uiux.vercel.app/)（デプロイ後に実際の URL に差し替えてください）
+[Vercel で公開中](uiux-orpin-nu.vercel.app
+)
 
 <p align="center">
 <img width="50%" height="50%" alt="ホームページ" src="https://github.com/user-attachments/assets/e01cade2-a7d0-4114-aea4-4d30a00cac1e"/>
