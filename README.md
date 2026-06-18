@@ -4,7 +4,7 @@
 「建築物」「食べ物」「歴史」の3つのカテゴリーに焦点を当て、金沢の伝統と現代が融合した姿を発信しています。
 
 
-[https://yasuhirokikuchi.github.io/](https://yasuhirokikuchi.github.io/)
+[Vercel で公開中](https://uiux.vercel.app/)（デプロイ後に実際の URL に差し替えてください）
 
 <p align="center">
 <img width="50%" height="50%" alt="ホームページ" src="https://github.com/user-attachments/assets/e01cade2-a7d0-4114-aea4-4d30a00cac1e"/>
@@ -37,6 +37,28 @@
 - **CSS3**: フレックスボックスやグリッドを用いたレイアウト、アニメーション。
 - **JavaScript (Vanilla JS)**: スムーズスクロール、ヘッダーのスクロールエフェクト。
 
+## デプロイ（Vercel）
+
+このサイトは [Vercel](https://vercel.com/) でホスティングしています。ビルドステップは不要な静的サイトです。
+
+### 初回セットアップ
+
+1. [Vercel](https://vercel.com/) に GitHub アカウントでログインする
+2. **Add New… → Project** から `yasuhirokikuchi/uiux` リポジトリをインポートする
+3. 設定はそのままで **Deploy** をクリックする
+   - **Framework Preset**: Other
+   - **Build Command**: 空欄
+   - **Output Directory**: 空欄（ルートをそのまま配信）
+4. デプロイ完了後、`https://<プロジェクト名>.vercel.app` で公開される
+
+### 以降の更新
+
+`main` ブランチへ push するたびに Vercel が自動で再デプロイします。
+
+### GitHub Pages からの移行
+
+GitHub Pages を使っていた場合は、リポジトリの **Settings → Pages** で **Source** を **None** に設定し、二重公開を防いでください。
+
 ## ファイル構造
 
 ```text
@@ -54,6 +76,7 @@
 │   └── index.js
 ├── images/               # 画像資産
 │   └── ... (全ての画像ファイル)
+├── vercel.json           # Vercel デプロイ設定
 └── README.md
 
 ```
