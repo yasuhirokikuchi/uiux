@@ -42,23 +42,6 @@
 
 このサイトは [Vercel](https://vercel.com/) でホスティングしています。ビルドステップは不要な静的サイトです。
 
-### 初回セットアップ
-
-1. [Vercel](https://vercel.com/) に GitHub アカウントでログインする
-2. **Add New… → Project** から `yasuhirokikuchi/uiux` リポジトリをインポートする
-3. 設定はそのままで **Deploy** をクリックする
-   - **Framework Preset**: Other
-   - **Build Command**: 空欄
-   - **Output Directory**: 空欄（ルートをそのまま配信）
-4. デプロイ完了後、`https://<プロジェクト名>.vercel.app` で公開される
-
-### 以降の更新
-
-`main` ブランチへ push するたびに Vercel が自動で再デプロイします。
-
-### GitHub Pages からの移行
-
-GitHub Pages を使っていた場合は、リポジトリの **Settings → Pages** で **Source** を **None** に設定し、二重公開を防いでください。
 
 ## ファイル構造
 
